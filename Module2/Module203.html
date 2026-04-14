@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Names</title>
+</head>
+<body>
+
+<h2>Dog Names (Reverse Alphabetical Order)</h2>
+<ul id="dogList"></ul>
+
+<script>
+    let dogs = [];
+
+    for (let i = 0; i < 6; i++) {
+        let name = prompt("Enter name of dog " + (i + 1) + ":");
+        dogs.push(name);
+    }
+
+    dogs.sort().reverse();
+
+    let list = document.getElementById("dogList");
+
+    for (let i = 0; i < dogs.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = dogs[i];
+        list.appendChild(li);
+    }
+</script>
+
+</body>
+</html>

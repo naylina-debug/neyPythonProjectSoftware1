@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duplicate Number Check</title>
+</head>
+<body>
+
+<h2>Check the console for output</h2>
+
+<script>
+    let numbers = [];
+
+    while (true) {
+        let input = prompt("Enter a number:");
+        let num = Number(input);
+
+        if (isNaN(num)) {
+            alert("Please enter a valid number!");
+            continue;
+        }
+
+        if (numbers.includes(num)) {
+            alert("Number already given! Program will stop.");
+            break;
+        }
+
+        numbers.push(num);
+    }
+
+    numbers.sort(function(a, b) {
+        return a - b;
+    });
+
+    console.log("Numbers in ascending order:");
+    console.log(numbers);
+</script>
+
+</body>
+</html>

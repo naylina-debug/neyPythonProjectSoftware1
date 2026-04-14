@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Dice Roll</title>
+</head>
+<body>
+
+<h2>Dice Rolls</h2>
+<ul id="rollList"></ul>
+
+<script>
+    function rollDice(sides) {
+        return Math.floor(Math.random() * sides) + 1;
+    }
+
+    let sides = Number(prompt("Enter number of sides on the dice:"));
+
+    let result;
+    let list = document.getElementById("rollList");
+
+    do {
+        result = rollDice(sides);
+
+        let li = document.createElement("li");
+        li.textContent = result;
+        list.appendChild(li);
+
+    } while (result !== sides);
+</script>
+
+</body>
+</html>

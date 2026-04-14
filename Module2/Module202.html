@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Participants List</title>
+</head>
+<body>
+
+<h2>Participants</h2>
+<ol id="nameList"></ol>
+
+<script>
+    let count = Number(prompt("Enter number of participants:"));
+
+    let names = [];
+
+    for (let i = 0; i < count; i++) {
+        let name = prompt("Enter name of participant " + (i + 1) + ":");
+        names.push(name);
+    }
+
+    names.sort();
+
+    let list = document.getElementById("nameList");
+
+    for (let i = 0; i < names.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = names[i];
+        list.appendChild(li);
+    }
+</script>
+
+</body>
+</html>

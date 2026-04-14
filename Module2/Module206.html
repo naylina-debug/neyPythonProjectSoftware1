@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Roll</title>
+</head>
+<body>
+
+<h2>Dice Rolls</h2>
+<ul id="rollList"></ul>
+
+<script>
+    function rollDice() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+    let result;
+    let list = document.getElementById("rollList");
+
+    do {
+        result = rollDice();
+
+        let li = document.createElement("li");
+        li.textContent = result;
+        list.appendChild(li);
+
+    } while (result !== 6);
+</script>
+
+</body>
+</html>
