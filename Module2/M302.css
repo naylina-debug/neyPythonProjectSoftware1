@@ -1,0 +1,14 @@
+target {
+  padding: 10px;
+  list-style-type: disc;
+}
+
+#target li {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.my-item {
+  color: red;
+  font-weight: bold;
+}
